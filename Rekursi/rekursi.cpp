@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+	// REKURSI
+	/*
+		REKURSI ADALAH SUATU KEMAMPUAN SUBRUTIN UNTUK MEMANGGIL DIRINYA SENDIRI
+		ITU DINAMAKAN SUBRUTIN REKURSIF
+
+		KEMAMPUAN ITU SANGAT BERGUNA KARENA MEMPERMUDAH SOLUSI
+		NAMUN REKURSI MEMPUNYAI KELEMAHAN YAKNI MEMUNGKINKAN TERJADINYA OVERFLOW
+		PADA STACK (STACK TIDAK LAGI MAMPU MENANGANI PERMINTAAN PEMANGGILAN SUBRUTIN
+		KARENA KEHABISAN MEMORI)
+
+		ITULAH SEBABNYA HARUS ADA JAMINAN BAHWA PROSES REKURSI AKAN BERHENTI PADA SUATU
+		WAKTU TERTENTU YANG MENYEBABKAN PEMANGGILAN FUNGSI BERAKHIR
+
+		STACK ADALAH AREA MEMORI YANG DIPAKAI UNTUK VARIABEL LOKAL DAN UNTUK MENGALOKASIKAN
+		MEMORI KETIKA SUATU FUNGSI DIPANGGIL
+	*/
+
+	int faktorial(int n){
+
+		if(n==0 || n==1){
+
+			return 1;
+		}
+		else{
+			cout << "Rekursif = " << n << endl;
+			return n * faktorial(n-1);
+		}
+	}
+
+
+int main(){
+
+	// CONTOH PROGRAM MENYELESAIKAN FAKTORIAL
+
+	int n;
+	long int hasil;
+
+	cout << "n= ";
+	cin >> n;
+
+	hasil = faktorial(n);
+
+	cout << n << "! = " << hasil << endl;
+
+
+
+
+
+
+	getch();
+	return 0;
+}

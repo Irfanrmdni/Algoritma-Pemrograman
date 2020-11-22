@@ -1,0 +1,89 @@
+#include <stdio.h>
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+// OPERASI PENGULANGAN DENGAN FOR LOOP / UNTUK..AKHIR..UNTUK
+	/*
+		UNTUK variabel <= awal S/D akhir LANGKAH langkah
+			pertanyaan..1
+
+			..
+
+			pertanyaan..2
+
+		AKHIR UNTUK
+
+		BENTUK DIATAS MELAKUKAN PENGULANGAN TERHADAP PERNYATAAN-1 DAN PERNYATAAN-2
+		YANG DIMULAI DARI VARIABEL AWAL HINGGA VARIABEL BERNILAI TIDAK LEBIH DARI AKHIR
+
+		PADA C++
+
+		FOR(VARIABEL=AWAL; VARIABEL<=AKHIR; VARIABEL = VARIABEL + LANGKAH){
+
+			pertanyaan..1
+
+			..
+
+			pertanyaan..2
+		}
+
+		variabel = variabel + langkah dapat ditulis menjadi variabel += langkah
+
+		beberapa bentuk yang setara dengan += antara lain -=, *=, +=, %=
+
+		variabel = variabel + 1 dapat ditulis menjadi variabel++
+
+	*/
+
+int main(){
+
+	for(int i=1; i<=8; i++){
+
+		cout << i << endl;
+	}
+	// I MEMPUNYAI NILAI 1, I KURANG DARI SAMADENGAN 8, MAKA MEMENUHI KEMUDIAN LANJUT LOOPING YANG KEDUA
+	// AKAN DITAMBAH 1 KARENA INCREMENT, MAKA 2 KURANG DARI SAMADENGAN 8, MEMENUHI KEMUDIAN LANJUT LOOPING KETIGA
+	// AKAN DITAMBAH 1 KARENA INCREMENT, MAKA JADI 3 KURANG DARI SAMADENGAN 8, MEMENUHI KEMUDIAN LANJUT LOOPING KEEMPAT
+	// AKAN DITAMBAH 1 KARENA INCREMENT, MAKA JADI 4 KURANG DARI SAMADENGAN 8, MEMENUHI KEMUDIAN LANJUT LOOPING KEEMPAT
+	// AKAN DITAMBAH 1 KARENA INCREMENT, MAKA JADI 5 KURANG DARI SAMADENGAN 8, MEMENUHI KEMUDIAN LANJUT LOOPING KEEMPAT
+	// AKAN DITAMBAH 1 KARENA INCREMENT, MAKA JADI 6 KURANG DARI SAMADENGAN 8, MEMENUHI KEMUDIAN LANJUT LOOPING KEEMPAT
+	// AKAN DITAMBAH 1 KARENA INCREMENT, MAKA JADI 7 KURANG DARI SAMADENGAN 8, MEMENUHI KEMUDIAN LANJUT LOOPING KEEMPAT
+	// AKAN DITAMBAH 1 KARENA INCREMENT, MAKA JADI 8 KURANG DARI SAMADENGAN 8, MEMENUHI KEMUDIAN LANJUT LOOPING KEEMPAT
+	// KETIKA DITAMBAH 1 KARENA INCREMENT SUDAH LEBIH DARI 8 MAKA PROSES LOOPING AKAN KELUAR DAN MENAMPILKAN OUTPUT
+
+	cout << endl << endl;
+
+	for(int j=1; j<=8; j+=3){
+
+		cout << j << endl;
+	}
+
+	cout << endl << endl;
+
+	for(int k=10; k>=5; k--){
+
+		cout << k << endl;
+	}
+
+	cout << endl << endl;
+
+	for(int a=10; a>=5; a-=2){
+
+		cout << a << endl;
+	}
+
+
+
+
+
+
+
+
+
+
+
+	getch();
+	return 0;
+}

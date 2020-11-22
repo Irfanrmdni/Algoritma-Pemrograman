@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+	//INI BERARTI KITA AKAN MEMBUAT FUNGSI AGAR SEMUA TIPE DATA MENJADI T MENGGUNAKAN TEMPLATE
+	//T ITU BERARTI TIPE DATA MENYANGKUT SELURUH TIPE DATA DOUBLE INT FLOAT
+	template<typename T>
+	void print(T data){
+
+		cout << data << endl;
+	}
+
+	//CONTOH MERUBAH TIPE DATA KE INT
+	//JADI YANG DI RETURN NYA ITU INT() KARENA KITA AKAN MERUBAH KE INT
+	template<typename T>
+	int to_int(T data){
+
+		return int(data);
+	}
+
+	//CONTOH KITA PUNYA 2 TIPE DATA T DAN U DENGAN DATA1 ITU TIPE DATA NYA T DAN DATA2 TIPE DATA NYA U
+	template<typename T, typename U>
+	T max(T data1, U data2){
+
+		return ((data1<data2) ? data1:data2); //TERNARY OPERATOR
+	}
+
+int main(){
+
+	//TEMPLATE FUNGSI YAITU KITA AKAN MERUBAH DARI TIPE DATA INT.DOUBLE.FLOAT DAN LAIN-LAIN ITU MENJADI SATU BUAH FUNGSI
+	print(12.9);
+	cout << to_int(12.1321) << endl; //MAKA DARI TIPE DATA DOUBLE INI AKAN DIRUBAH MENJADI TIPE DATA INT
+	cout << max(12.1,90) << endl;
+
+	//INI BERARTI KITA MAU MERUBAH NILAINYA KE INT DENGAN CARA MENULISKAN <INT> DIDEPAN PRINT
+	print<int>(12.2);
+	//INI BERARTI KITA MAU MERUBAH DATA1 NILAINYA KE DOUBLE DAN DATA2 NILAINYA DIGANTI KE INT
+	cout << max<double,int>(12.1,90) << endl;
+
+	getch();
+	return 0;
+}
